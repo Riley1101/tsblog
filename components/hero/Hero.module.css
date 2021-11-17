@@ -1,0 +1,67 @@
+.hero{
+    width: 100%;
+    height: 100%;
+}
+
+.hero__article{
+    padding: 1em;
+    display: grid;
+}
+
+.hero__article__image{
+    border-radius:8px;
+}
+
+.hero__article__post__avator{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.hero__article__post__body{
+    font-size: 1rem;    
+}
+.hero__article__post__avator__profile{
+    width: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.hero__article__post__avator__name{
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1000px) {
+    .hero{
+        width: 80%;
+        margin-inline: auto;
+    }
+    .hero__article{
+        grid-template-columns:1fr 1fr;
+        gap: 1em;
+    }
+    .hero__article__image{
+        grid-column: 1/-1;
+        object-fit: cover;
+        width: 100%;
+        height: 320px;
+    }
+    .hero__article__post{
+        display: contents;
+    }
+    .hero__article__post__title{
+        grid-column: 1/2;
+        font-size: 3rem;
+        margin-block-start:2em;
+    }
+    .hero__article__post__wrapper{
+        grid-column: 2/-1;
+        display: flex;
+        flex-direction: column;
+        margin-block: 4em;
+    }
+    .hero__article__post__body{
+        display: block;
+        font-size: 1.5rem;
+    }
+}

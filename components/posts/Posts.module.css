@@ -1,0 +1,21 @@
+.posts{
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+.posts__title{
+    font-size: 2.5rem;
+    margin-block-end: 4rem;
+}
+.posts__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    gap: 3em;
+}   
+
+@media screen and (min-width:800px) {
+    .posts{
+        width: 80%;
+        margin-inline: auto;
+    }
+}
